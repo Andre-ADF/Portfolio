@@ -1,5 +1,7 @@
+/* Global styles */
 :root {
-	
+	--color-primary: #222;
+	--color-secondary: #fff;
 }
 
 * {
@@ -11,4 +13,67 @@
 
 body{
 	background-color: #555;
+	font-size: 20px;
 }
+
+#header-container{
+	display: flex;
+	align-items: center;
+	background-color: var(--color-primary);
+	width: 100vw;
+	height: 60px;
+}
+
+#header-container .logo{
+	height: 50px;
+	padding-left: 2rem;
+}
+
+/* Navigation styles */
+.main-navigation{
+	display: flex;
+	justify-content: flex-end;
+	width: 100vw;
+	height: 60px;
+}
+
+.main-navigation .nav-links{
+	display: flex;
+	align-items: center;
+	padding-right: 2rem;
+	list-style-type: none;
+}
+
+.main-navigation .nav-links a{
+	color: var(--color-secondary);
+	padding: 1rem;
+	text-decoration: none;
+}
+
+/* Footer styles */
+footer{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--color-primary);
+	width: 100vw;
+	height: 60px;
+	position: fixed;
+	bottom: 0;
+}
+
+footer p{
+	color: var(--color-secondary);
+	font-size: 0.9rem;
+	padding-left: 2rem
+}
+
+footer small{
+	font-size: 0.8rem;	
+}
+
+footer .social-media{
+	padding-right: 2rem;
+}
+
+/* Media queries */
