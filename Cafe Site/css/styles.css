@@ -1,8 +1,10 @@
+/* Global styles */
 :root{
 	--clr-primary: #222;
 	--clr-secondary: #fff;
 	--clr-text: #fff;
 	--clr-background: #333;
+	--clr-heading: #111;
 }
 
 *{
@@ -15,33 +17,15 @@ body{
 	background-color: var(--clr-background);
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 18px;
+	height: 2000px;
 }
 
-/* Grid Styles */
 .wrapper{
-	margin: 0;
-	padding: 0;
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: 60px 100px 60px 40px 400px 40px 400px 40px 400px 40px 400px 40px 400px 60px;
-	grid-template-areas: 
-	"logo logo logo"
-	"hero hero hero"
-	"nav nav nav"
-	"left-img about-header right-img"
-	"left-img about right-img"
-	"drink-header drink-header drink-header"
-	"drinks drinks drinks"
-	"pastries-header pastries-header pastries-header"
-	"pastries pastries pastries"
-	"hours-header hours-header hours-header"
-	"hours hours hours"
-	"contact-header contact-header contact-header"
-	"contact contact contact"
-	"footer footer footer";
+	height: 100vh;
+	width: 100vw;
 }
 
-/* Grid Areas */
+/* Section styles */
 #logo-container{
 	grid-area: logo;
 	background-color: var(--clr-primary);
@@ -55,97 +39,82 @@ body{
 }
 
 #hero-container{
-	grid-area: hero;
 	background-color: var(--clr-background);
 	background-image: url(../assets/img/banner.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
+	height: 150px;
 }
 
 #navigation-container{
-	grid-area: nav;
+	display: flex;
+	justify-content: center;
 	background-color: var(--clr-primary);
 }
 
-#left-img{
-	grid-area: left-img;
-	background-color: var(--clr-background);
+#heading{
 	display: flex;
 	justify-content: center;
-	align-items: center;
-}
-
-#about-header{
-	grid-area: about-header;
-	background-color: var(--crl-background);
+	width: 100%;
+	color: var(--clr-secondary);
+	padding: 0.5rem 0;
+	background-color: var(--clr-heading);
 }
 
 #about{
-	grid-area: about;
-	background-color: var(--clr-background);
-}
-
-#right-img{
-	grid-area: right-img;
-	background-color: var(--clr-background);
 	display: flex;
 	justify-content: center;
 	align-items: center;
-}
-
-#drink-header{
-	grid-area: drink-header;
+	width: 90%;
+	margin: 0 auto;
+	height: 400px;
 	background-color: var(--clr-background);
-	border-top: 1px solid #fff;
+	
 }
 
 #drink-menu{
-	grid-area: drinks;
+	display: flex;
 	background-color: var(--clr-background);
 }
 
 #pastries-header{
-	grid-area: pastries-header;
-	background-color: var(--clr-background);
-	border-top: 1px solid #fff;
+	
 }
 
 #pastries-menu{
-	grid-area: pastries;
-	background-color: var(--clr-background);
+	
 }
 
 #hours-header{
-	grid-area: hours-header;
-	background-color: var(--clr-background);
-	border-top: 1px solid #fff;	
+	
 }
 
 #hours{
-	grid-area: hours;
-	background-color: var(--crl-background);
+	
 }
 
 #contact-header{
-	grid-area: contact-header;
-	background-color: var(--clr-background);
-	border-top: 1px solid #fff;	
+	
 }
 
 #contact{
-	grid-area: contact;
-	background-color: var(--clr-background);
+	
 }
 
 #footer-container{
-	grid-area: footer;
+	display: flex;
+	justify-content: center;
+	height: 50px;
 	background-color: var(--clr-primary);
 }
 
 /* Image Styles */
+.image{
+	display: flex;
+}
+
 .img{
-	max-width: 300px;
-	height: auto;
+	max-width: 350px;
 }
 
 /* Text Styles */
@@ -169,14 +138,17 @@ body{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 100%;
 	padding: 1rem;
+	max-width: 350px;
+	height: 350px;
 }
 
 .about-description p{
 	color: var(--clr-text);
-	font-size: 0.9em;
+	font-size: 0.9rem;
 	padding: 10px;
+	height: 350px;
+	margin: auto;
 }
 
 .menu-container{
@@ -200,6 +172,7 @@ body{
 	font-size: 0.8em;
 }
 
+/* Navigation styles */
 .main-nav{
 	display: flex;
 	justify-content: center;
@@ -208,9 +181,13 @@ body{
 }
 
 .sticky {
-	position: -webkit-sticky;
-	position: sticky;
-	top: 0;
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
 }
 
 .nav-links{
@@ -276,6 +253,7 @@ li.cta:hover a{
 	color: var(--clr-background);
 }
 
+/* Footer styles */
 .footer-description{
 	display: flex;
 	justify-content: center;
@@ -288,3 +266,15 @@ li.cta:hover a{
 	color: var(--clr-text);
 	font-size: 0.8em;
 }
+
+/* Set the size of the div element that contains the map */
+#map {
+  height: 400px;
+  /* The height is 400 pixels */
+  width: 100%;
+  /* The width is the width of the web page */
+}
+style.css
+
+
+/* Media queries */
