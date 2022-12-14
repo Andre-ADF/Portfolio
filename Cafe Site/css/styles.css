@@ -52,7 +52,7 @@ body{
 	background-color: var(--clr-primary);
 }
 
-#heading{
+#heading-about, #heading-{
 	display: flex;
 	justify-content: center;
 	width: 100%;
