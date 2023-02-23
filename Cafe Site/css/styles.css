@@ -1,280 +1,222 @@
 /* Global styles */
 :root{
 	--clr-primary: #222;
-	--clr-secondary: #fff;
-	--clr-text: #fff;
+	--clr-secondary: #d6d6d6;
+	--clr-text: #d6d6d6;
 	--clr-background: #333;
 	--clr-heading: #111;
+	--clr-ahover: #777;
+	--clr-ctahover: #555;
+	--clr-cta: #999;
+	--clr-acta: #fff;
 }
 
-*{
+* {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	font-family: 'Roboto', sans-serif;
+
 }
 
 body{
-	background-color: var(--clr-background);
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 18px;
-	height: 2000px;
-}
-
-.wrapper{
-	height: 100vh;
-	width: 100vw;
-}
-
-/* Section styles */
-#logo-container{
-	grid-area: logo;
-	background-color: var(--clr-primary);
 	display: flex;
 	justify-content: center;
-	align-items: center;
-}
-
-.logo{
-	height: 50px;
-}
-
-#hero-container{
-	background-color: var(--clr-background);
-	background-image: url(../assets/img/banner.jpg);
-	background-size: cover;
-	background-repeat: no-repeat;
-	height: 150px;
-}
-
-#navigation-container{
-	display: flex;
-	justify-content: center;
-	background-color: var(--clr-primary);
-}
-
-#heading-about, #heading-{
-	display: flex;
-	justify-content: center;
+	background-color: #333;
 	width: 100%;
-	color: var(--clr-secondary);
-	padding: 0.5rem 0;
-	background-color: var(--clr-heading);
+	height: auto;
+	font-size: 18px;
 }
 
-#about{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 90%;
-	margin: 0 auto;
-	height: 400px;
-	background-color: var(--clr-background);
-	
-}
-
-#drink-menu{
-	display: flex;
-	background-color: var(--clr-background);
-}
-
-#pastries-header{
-	
-}
-
-#pastries-menu{
-	
-}
-
-#hours-header{
-	
-}
-
-#hours{
-	
-}
-
-#contact-header{
-	
-}
-
-#contact{
-	
-}
-
-#footer-container{
-	display: flex;
-	justify-content: center;
-	height: 50px;
-	background-color: var(--clr-primary);
-}
-
-/* Image Styles */
-.image{
-	display: flex;
-}
-
-.img{
-	max-width: 350px;
-}
-
-/* Text Styles */
-.heading{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100%;
-	font-size: 0.8em;
-	color: var(--clr-text);
-}
-
-.hero-text{
-	font-size: 30px;
-	padding: 0.5em;
-	color: var(--clr-text);
-	text-shadow: 1px 2px #000;
-}
-
-.about-description{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 1rem;
-	max-width: 350px;
-	height: 350px;
-}
-
-.about-description p{
-	color: var(--clr-text);
-	font-size: 0.9rem;
-	padding: 10px;
-	height: 350px;
-	margin: auto;
-}
-
-.menu-container{
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
-.menu-description{
-	padding: 2em;
-	color: var(--clr-text);
-	font-size: 0.8em;
-}
-
-.hours-container{
-	padding: 2em;
-}
-
-.hours-description p{
-	color: var(--clr-text);
-	font-size: 0.8em;
-}
-
-/* Navigation styles */
-.main-nav{
-	display: flex;
-	justify-content: center;
-	align-items: center;
+.wrapper {
+	background-color: #999;
+	width: 1200px;
 	height: 100%;
 }
 
 .sticky {
-  position: sticky;
-  top: 0;
-  width: 100%;
+	position: sticky;
+	top: 0;
+	width: 100%;
 }
 
 .sticky + .content {
-  padding-top: 60px;
+	padding-top: 60px;
 }
 
-.nav-links{
+/* Logo Container */
+#logo-container {
 	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 70px;
+	background-color: var(--clr-primary);
+}
+
+.logo {
+	height: 50px;
+	width: auto;
+}
+
+.logo:hover {
+	cursor: pointer;
+}
+
+/* Banner Styles */
+#hero-container {
+	width: 100%;
+	height: 200px;
+	background-color: #666;
+	background-image: url("../assets/img/banner_update.jpg");
+	background-size: 1200px 200px;
+	background-repeat: no-repeat;
+}
+
+#hero-container .hero-text {
+	font-size: 1.5rem;
+	color: var(--clr-text);
+	padding: 1.5rem; 
+	text-shadow: 2px 1px #000;
+}
+
+/* Navigation Styles */
+#navigation-container {
+	
+}
+
+.main-nav {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	height: 70px;
+	background-color: var(--clr-primary);
+}
+
+.main-nav .nav-links {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 100%;
 	list-style: none;
 }
 
-.nav-links li{
-	padding: 1.5em;
-}
-
-.nav-links li a{
+.nav-links a {
+	color: var(--clr-text);
+	padding: 0 2rem;
 	text-decoration: none;
+	font-size: 1.2rem;
+}
+
+.nav-links a:hover {
+	color: var(--clr-ahover);
+}
+
+/* About Section */
+#heading-about, 
+#heading-pastries,
+#heading-drink,
+#heading-hours,
+#heading-contact {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 40px;
 	color: var(--clr-text);
+	background-color: var(--clr-heading);
+	font-size: 1rem;
+	scroll-padding-top: -100px;
 }
 
-li.cta a{
-	background-color: var(--clr-secondary);
-	color: var(--clr-primary);
-	padding: 10px;
-	border-radius: 8px;
+
+#about {
+	display: flex;
+	align-items: center;
+	flex-basis: 30%;
+	width: 100%;
+	height: 350px;
+	background-color: var(--clr-primary);
 }
 
-li.cta:hover a{
-	background-color: var(--clr-background);
+#about .about-description {
+	font-size: 0.9rem;
 	color: var(--clr-text);
+	width: 400px;
+	padding: 0 2rem;
 }
 
-.form-container{
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-gap: 20px;
+img {
+	width: 300px;
+	height: 300px;
+	margin: auto;
+}
+
+/* Drink Menu Styles */
+#drink-menu {
+	display: flex;
+	width: 100%;
+	height: 350px;
+	background-color: var(--clr-primary);
+}
+
+.menu-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	margin: 0 1rem ; 
+}
+
+.menu-description {
+	color: var(--clr-text);
+	font-size: 0.9rem;
+	padding: 0 1em;
+}
+
+/* Pastries Menu Styles */
+#pastries-menu {
+	display: flex;
+	width: 100%;
+	height: 350px;
+	background-color: var(--clr-primary);
+}
+
+/* Hours Styles */
+#hours {
+	display: flex;
+	width: 100%;
+	height: 350px;
+	background-color: var(--clr-primary);
+}
+
+.hours-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
 	height: 100%;
 }
 
-.form{
-	display: grid;
-	grid-gap: 10px;
-	background-color: #000;
-	height: 90%;
-	padding: 10px;
-	margin: 1em;
-	border-radius: 1em;
-}
-
-.form label{
+.hours-description {
 	color: var(--clr-text);
-	font-size: 0.9em;
+	font-size: 0.9rem;
+	padding: 0 1em;
 }
 
-.btn{
-	width: 100%;
-	background-color: var(--clr-background);
-	border: none;
-	color: var(--clr-text);
-	font-size: 0.8em;
-	padding: 5px;
-	border-radius: 0.5em;
-}
-
-.btn:hover{
-	background-color: var(--clr-text);
-	color: var(--clr-background);
-}
-
-/* Footer styles */
-.footer-description{
+/* Footer Styles */
+#footer-container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	height: 100%;
+	background-color: var(--clr-primary);
+	width: 100%;
+	height: 70px;
 }
 
-.footer-description p{
+#footer-container .footer-description {
 	color: var(--clr-text);
-	font-size: 0.8em;
+	font-size: 0.9rem;
 }
-
-/* Set the size of the div element that contains the map */
-#map {
-  height: 400px;
-  /* The height is 400 pixels */
-  width: 100%;
-  /* The width is the width of the web page */
-}
-style.css
-
-
-/* Media queries */
