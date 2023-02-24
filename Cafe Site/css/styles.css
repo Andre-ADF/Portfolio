@@ -20,6 +20,50 @@
 }
 
 body{
+background-color: var(--clr-background);
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	height: 2000px;
+}
+
+.wrapper{
+	height: 100vh;
+	width: 100vw;
+}
+
+/* Section styles */
+#logo-container{
+	grid-area: logo;
+	background-color: var(--clr-primary);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.logo{
+	height: 50px;
+}
+
+#hero-container{
+	background-color: var(--clr-background);
+	background-image: url(../assets/img/banner.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 150px;
+}
+
+#navigation-container{
+	display: flex;
+	justify-content: center;
+	background-color: var(--clr-primary);
+}
+
+#heading-about, 
+#heading-drink, 
+#heading-pastries, 
+#heading-hours, 
+#heading-contact{
+
 	display: flex;
 	justify-content: center;
 	background-color: #333;
@@ -126,7 +170,6 @@ body{
 	color: var(--clr-text);
 	background-color: var(--clr-heading);
 	font-size: 1rem;
-	scroll-padding-top: -100px;
 }
 
 
