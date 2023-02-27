@@ -26,6 +26,7 @@ body{
 	height: 100vh;
 	display: flex;
 	justify-content: center;
+	background-color: var(--clr-secondary);
 }
 
 .wrapper{
@@ -258,28 +259,39 @@ img {
 	display: flex;
 	background-color: var(--clr-primary);
 	width: 100%;
+	height: 100%;
 }
 
 #form {
 	display: flex;
+	justify-content: center;
 	flex-direction: column;
 	width: 45%;
-	background-color: green;
-	margin: 2rem;
+	height: 300px;
+	background-color: var(--clr-secondary);
+	margin: auto 2rem;
 	border-radius: 1rem;
+	border: 2px solid var(--clr-secondary);
+}
+
+input {
+	width: 90%;
 }
 
 #map {
 	background-color: blue;
 	width: 45%;
+	height: 300px;
 	display: flex; 
 	justify-content: center;
-	margin: 2rem;
+	margin: auto 2rem;
 	border-radius: 1rem;
+	border: 2px solid var(--clr-secondary);
 }
 
 h3 {
 	color: var(--clr-text);
+	padding: 10px;
 }
 
 /* Footer Styles */
