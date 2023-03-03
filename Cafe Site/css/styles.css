@@ -80,7 +80,7 @@ body{
 .sticky {
 	overflow: hidden;
   width: 100%; 
-  color  white; 
+  color:  white; 
   position: -webkit-sticky;
   position: sticky;
   top: 0px;
@@ -277,7 +277,7 @@ img {
 input {
 	width: 90%;
 }
-
+/*
 #map {
 	background-color: blue;
 	width: 45%;
@@ -288,10 +288,19 @@ input {
 	border-radius: 1rem;
 	border: 2px solid var(--clr-secondary);
 }
-
+*/
 h3 {
 	color: var(--clr-text);
 	padding: 10px;
+}
+
+iframe {
+	width: 45%;
+	height: 300px;
+	border: 0;
+	margin: auto 2rem;
+	border-radius: 1rem;
+	border: 2px solid var(--clr-secondary);
 }
 
 /* Footer Styles */
